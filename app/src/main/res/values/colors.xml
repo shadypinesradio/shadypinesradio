@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#185a9d</color>
+    <color name="colorPrimaryDark">#185a9d</color>
+    <color name="colorAccent">#185a9d</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#ffffff</color>
+
+    <color name="primaryColor">#185a9d</color>
+    <color name="accentColor">#185a9d</color>
+    <color name="purple_200">#185a9d</color>
+    <color name="purple_500">#185a9d</color>
+    <color name="purple_700">#185a9d</color>
+    <color name="teal_200">#185a9d</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#ffffff</color>
+    <color name="green">#35e64d</color>
+    <color name="splash_background">#1e444f</color>
+    <color name="gradientColorBottom">#185a9d</color>
+    <color name="myPrimaryColor">#1f618c</color>
+    <color name="myAccentColor">#2e8ece</color>
+    <color name="selectedColor">#295B67</color>
+    <color name="menucolor">#1e444f</color>
+    <color name="gray">#A9A9A9</color>
+    <color name="quick_start">#212121</color>
+    <color name="back">#DFDCDC</color>
+    <color name="ads_backgroud">#83000000</color>
+    <color name="card_back">#F1EFEF</color>
+
+
+
+
+
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Shady Pines Radio</string>
+
+    <!--Error Message-->
+    <string name="error_unknown">Unknown error.</string>
+    <string name="server_not_found">Server not found.</string>
+    <string name="server_broken">Server broken.</string>
+    <string name="error">Error Occurred</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="notification_title">Shady Pines Radio</string>
+    <string name="facebook_app_id">202191485115475</string>
+    <string name="fb_login_protocol_scheme">fb202191485115475</string>
+    <string name="shady_pines_radio">Shady Pines Radio</string>
+    <string name="hide_keyboard">Hide Keyboard</string>
+    <string name="push_notification_title">Push Notification Title</string>
+    <string name="push_notification_message">Push Notification Message</string>
+    <string name="default_push_notification">Default Push Notification</string>
+    <string name="google_client_id">909980482737-2ts62cvjsieh2c0a1p1g8v5crbr9dois.apps.googleusercontent.com</string>
+
+</resources>

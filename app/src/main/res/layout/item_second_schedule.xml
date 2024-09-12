@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2C4E74">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_image"
+        android:layout_width="110dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_time">
+
+        <ImageView
+            android:id="@+id/image_view_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dummy" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/click_able_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txt_subscribe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/subscribe_count"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/txt_subscribe"
+        app:layout_constraintStart_toStartOf="@id/txt_subscribe"
+        app:layout_constraintBottom_toTopOf="@id/txt_subscribe"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_person"/>
+        <TextView
+            android:id="@+id/subscribe_count_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:layout_marginStart="2dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-black"
+            android:text = "20"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_subscribe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/bg_sub_btn_unselected"
+        android:padding="8dp"
+        android:text="Subscribe"
+        android:textColor="#1f4419"
+        app:layout_constraintBottom_toBottomOf="@id/txt_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_desc"
+        app:layout_constraintTop_toTopOf="@id/text_dj_name" />
+
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_title"
+        app:layout_constraintEnd_toStartOf="@+id/gif_active"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/card_view_image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="09:30 AM - 10:30 AM" />
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="39dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/roboto_medium_numbers"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toTopOf="@+id/text_dj_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/card_view_image"
+        app:layout_constraintTop_toBottomOf="@id/txt_time"
+        app:layout_constraintVertical_bias="0"
+        tools:text="Radio Today, Bhoot FM 99.00" />
+
+    <TextView
+        android:id="@+id/text_dj_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        android:text="dj name"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:textAllCaps="false"
+        android:fontFamily="@font/font_sf_pro"
+        android:gravity="start"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txt_desc"
+        app:layout_constraintStart_toEndOf="@id/card_view_image"
+        app:layout_constraintEnd_toEndOf="@+id/click_able_view"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title"/>
+
+
+    <TextView
+        android:id="@+id/txt_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:maxLines="7"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/view_line"
+        app:layout_constraintEnd_toEndOf="@+id/click_able_view"
+        app:layout_constraintStart_toEndOf="@id/card_view_image"
+        app:layout_constraintTop_toBottomOf="@id/text_dj_name"
+        app:layout_constraintVertical_bias="0"
+        tools:text="We are going to play with a new DJ and the show is the best pop song publisher bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttccccccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbzzzzzzzzzzzzz" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_active"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+
+        android:scaleType="fitCenter"
+        android:src="@drawable/active_status"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/txt_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_time"
+        app:layout_constraintTop_toTopOf="@id/txt_time" />
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

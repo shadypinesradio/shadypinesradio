@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission
+        android:name="android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".SyadApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustResize"
+        tools:targetApi="m">
+        <activity
+            android:name=".view.activity.SUbscribersListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.TempActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeStatusWhite"
+            android:screenOrientation="portrait"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.Admin_panal_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.Deshbord_MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".view.activity.SplashActivity" />
+        <activity android:name=".view.activity.UpdatePassword_Activity" />
+        <activity android:name=".view.activity.UpdateEmail_Activity" />
+        <activity android:name=".view.activity.Update_UserNameActivity" />
+        <activity android:name=".view.activity.Setting_Activity" />
+        <activity
+            android:name=".view.authentication.social.SocialActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.authentication.profile.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusWhite" />
+        <activity
+            android:name=".view.authentication.profiledetails.ProfileDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusWhite" />
+        <activity
+            android:name=".view.authentication.changepassword.ChangePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.authentication.forgot.ForgotActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GradientStatusBar" />
+        <activity
+            android:name=".view.authentication.signin.SignInActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".view.authentication.signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeStatusWhite" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TestingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.activity.Deshbord_UpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.GradientStatusBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" /> <!-- <receiver android:name=".utils.ConnectivityChangeReceiver" /> -->
+        <receiver
+            android:name="com.shadypines.utils.LaunchPlayerBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.beraldo.playerlib.LAUNCH_PLAYER_ACTIVITY" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".services.NotificationService" />
+
+
+        <service
+            android:name=".player.NewPlayService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+
+        <service
+            android:name=".services.NotificationIntentService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="left" />
+                <action android:name="right" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

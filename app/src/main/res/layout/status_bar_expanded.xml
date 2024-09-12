@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notificationbg"
+    android:layout_width="fill_parent"
+    android:layout_height="128.0dip">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="1.0px"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/status_bar_album_art"
+        android:background="?android:dividerHorizontal" />
+
+    <ImageView
+        android:id="@+id/status_bar_play"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:src="@drawable/ic_pause_notification" />
+
+    <ImageView
+        android:id="@+id/status_bar_album_art"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/textarea"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@id/status_bar_play"
+        android:layout_toRightOf="@id/status_bar_album_art"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/status_bar_track_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fadingEdge="horizontal"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/status_bar_artist_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fadingEdge="horizontal"
+            android:maxLines="1" />
+    </LinearLayout>
+</RelativeLayout>
